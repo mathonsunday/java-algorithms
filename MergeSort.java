@@ -1,9 +1,12 @@
+import java.util.Arrays;
+
 public class MergeSort {
 
 	public static void main(String[] args) {
+		MergeSort sort = new MergeSort();
 		int[] array = {1, 5, 3, 6, 4};
-		mergesort(array);
-		System.out.println(array);
+		sort.mergesort(array, 0, 4);
+		System.out.println(Arrays.toString(array));
 	}
 	
 	void mergesort(int[] array, int low, int high) {
