@@ -29,4 +29,10 @@ int binarySearchRecursive(int[] a, int x, int low, int high) {
 		return mid;
 	}
 }
+
+public static void main(String[] args) {
+	BinarySearch search = new BinarySearch();  
+	int[] array = {1, 6, 5, 3};
+	System.out.println(search.binarySearch(array, 6) == 1);
+}
 }
