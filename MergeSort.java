@@ -13,6 +13,7 @@ public class MergeSort {
 		if (low < high) {
 			int middle = (low + high) / 2;
 			mergesort(array, low, middle); // Sort left half
+			System.out.println(Arrays.toString(array));
 			mergesort(array, middle + 1, high); // Sort right half
 			merge(array, low, middle, high); // Merge them
 		}
@@ -31,7 +32,7 @@ public class MergeSort {
 		int current = low;
 
 		// Iterate throught helper array. Compare the left and right
-		// half, copying back the smaller elements from the teo halves
+		// half, copying back the smaller elements from the two halves
 		// into the original array.
 		while (helperLeft <= middle && helperRight <= high) {
 			if (helper[helperLeft] <= helper[helperRight]) {
