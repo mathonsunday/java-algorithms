@@ -16,12 +16,11 @@ public class MergeSort {
 			System.out.println(Arrays.toString(array));
 			mergesort(array, middle + 1, high); // Sort right half
 			merge(array, low, middle, high); // Merge them
-		}
+		}¸
 	}
 
 	void merge(int[] array, int low, int middle, int high) {
 		int[] helper = new int[array.length];
-
 		// Copy both halves into a helper array
 		for(int i = low; i <= high; i++) {
 			helper[i] = array[i];
@@ -49,7 +48,7 @@ public class MergeSort {
 		// Copy the rest of the left side of the array into the target array
 			int remaining = middle - helperLeft;
 			for (int i = 0; i <= remaining; i++) {
-				array[current + i] = helper[helperLeft + 1];
+				array[current + i] = helper[helperLeft + i];
 			}
 		}
 	}
